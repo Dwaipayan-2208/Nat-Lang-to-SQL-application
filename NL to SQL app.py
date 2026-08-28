@@ -54,10 +54,11 @@ def get_nvidia_client():
 
 # Database Connection Setup
 def connect_to_sql():
-    host = os.getenv("MYSQL_HOST", "localhost")
-    user = os.getenv("MYSQL_USER", "root")
-    password = os.getenv("MYSQL_PASSWORD", "@Dwa2208#")
-    database = os.getenv("MYSQL_DATABASE", "school_db")
+    host = st.secrets.get("MYSQL_HOST", os.getenv("MYSQL_HOST"))
+    port = int(st.secrets.get("MYSQL_PORT", os.getenv("MYSQL_PORT", 3306)))
+    user = st.secrets.get("MYSQL_USER", os.getenv("MYSQL_USER"))
+    password = st.secrets.get("MYSQL_PASSWORD", os.getenv("MYSQL_PASSWORD"))
+    database = st.secrets.get("MYSQL_DATABASE", os.getenv("MYSQL_DATABASE"))
 
     return mysql.connector.connect(
         host=host, user=user, password=password, database=database
