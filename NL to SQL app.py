@@ -101,7 +101,7 @@ def generate_sql_query(user_question):
     )
 
     response = client.chat.completions.create(
-        model="nvidia/nemotron-3.5-lightning-30b-a3b",
+        model="deepseek-ai/deepseek-v4-flash-0731",
         messages=[{"role": "user", "content": prompt}],
     )
 
