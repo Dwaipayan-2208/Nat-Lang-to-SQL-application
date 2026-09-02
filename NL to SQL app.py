@@ -101,7 +101,7 @@ def generate_sql_query(user_question):
     )
 
     response = client.chat.completions.create(
-        model="meta/llama-3.1-8b-instruct",
+        model="nvidia/nemotron-3.5-lightning-30b",
         messages=[{"role": "user", "content": prompt}],
     )
 
