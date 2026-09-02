@@ -101,7 +101,7 @@ def generate_sql_query(user_question):
     )
 
     response = client.chat.completions.create(
-        model="mistralai/mistral-7b-instruct-v0.3",
+        model="meta/llama-3.1-8b-instruct",
         messages=[{"role": "user", "content": prompt}],
     )
 
