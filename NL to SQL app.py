@@ -61,7 +61,7 @@ def connect_to_sql():
     database = st.secrets.get("MYSQL_DATABASE", os.getenv("MYSQL_DATABASE"))
 
     return mysql.connector.connect(
-        host=host, user=user, password=password, database=database,connection_timeout=60
+        host=host, user=user, password=password, database=database,temperature=0.0,max_tokens=150,connection_timeout=60
     )
 
 
