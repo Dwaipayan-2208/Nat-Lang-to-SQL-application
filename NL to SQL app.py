@@ -101,7 +101,7 @@ def generate_sql_query(user_question):
     )
 
     response = client.chat.completions.create(
-        model="deepseek-ai/deepseek-v4-flash-0731",
+        model="mistralai/mistral-7b-instruct-v0.3",
         messages=[{"role": "user", "content": prompt}],
     )
 
