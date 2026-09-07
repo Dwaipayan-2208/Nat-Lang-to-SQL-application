@@ -11,6 +11,6 @@ The application works with the following four tables:
 * chess
 * music
 
-The database table structure is provided in database/schema.sql.
+The database table structure is provided in [`database/schema.sql`](database/schema.sql).
 
 Database credentials and API keys are not included in this repository. They are securely managed using environment variables for local development.
